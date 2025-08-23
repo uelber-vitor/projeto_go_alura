@@ -31,3 +31,12 @@ jobs:
 
     - name: Test
       run: go test -v main_test.go
+
+    - name: Build
+      run: go build main.go
+
+    - name: Projeto Compilado
+      uses: actions/upload-artifact@v4
+      with:
+        name: projeto_compilado
+        path: main
